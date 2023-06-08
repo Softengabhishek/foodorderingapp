@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+:root{
+  --blue : #0E2368;
+  --red : #E23744;
+  --paraColor : #444957;
+  --white : #ffffff;
+  --grey : #F8F8F8;
+  --borderColor :  #93A2D361,
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button{
+  color: var(--white);
+  background-color: var(--red);
+  border-radius: 34px;
+  display: inline-block;
+  font-size: 15px;
+  padding: 14px 34px;
+  margin-top: 40px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  height: 807px;
+  width: 1440px;
+
+}
+.left_header{
+  padding: 2rem 0 0 5rem;
+}
+.header_title{
+  width: 345px;
+  height: 207px;
+  font-size: 40px;
+  color: var(--blue);
+  margin-top: 80px;
+}
+.header_title_mid{
+  color: var(--red);
+}
+.header_desc{
+  color: var(--paraColor);
+  height: 55px;
+  width: 345px;
+  margin-top: 20px;
+}
+.right_header{
+  background: url("../src/images/pizza.png");
+  background-repeat: no-repeat;
+}
+
+/* About page designing css */
+.about_section{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--grey);
+  padding: 0 200px 0 200px;
+  margin: 100px 0;
+  width: 1040px;
+  height: 467px;
+
+}
+.about_content{
+  padding: 0 125px;
+}
+.about_title{
+  color: var(--blue);
+  font-size: 35px;
+}
+.about_desc{
+  color: var(--paraColor);
+  margin: 10px 0;
+}
+.cards_row{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  width: 1440px;
+}
+.cards{
+  height: 465px;
+  width: 381px;
+  border: 1.37px solid #93A2D361;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 0 20px;
+}
+.button2{
+  border-radius: 34px;
+  border : 1.37px solid #93A2D361;
+  display: inline-block;
+  font-size: 30px;
+  margin: 20px 0;
+}
+.articles_section{
+  width: 1440px;
+}
+.latest_article{
+  color: var(--blue);
+  font-size: 35px;
+  font-weight: 700;
+  margin: 20px 20px ;
+}
+.article_desc{
+  line-height: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+footer{
+  height: 362px;
+  width: 1440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.col1 , .col2 , .col3{
+  line-height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width : 375px){
+.header{
+  display: flex;
+  width: 378.21px;
+  height: auto;
+  flex-direction: column-reverse;
+}
+.logo{
+  display: none;
+}
+.right_header{
+  width: 380px;
+  height: 426px;
+  background-size: cover;
+}
+.right_header img {
+  width: 380px;
+  height: 446px;
+}
+.left_header{
+  width: 300px;
+  height: 426px;
+  padding: 0;
+}
+footer{
+  width: 380px;
+  flex-direction: column;
+  margin-top: 100px;
+}
 }
