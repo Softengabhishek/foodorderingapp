@@ -53,7 +53,7 @@ const Cards = () => {
                     <div className="article_image"><img src={data.image} alt="" /></div>
                     <div className="article_title">{data.title}</div>
                     <div className="article_desc"><p>{data.desc}</p></div>
-                    <div className="button2">Read More</div>
+                    <div className="button">Read More</div>
                 </div>
             })}
         </div>

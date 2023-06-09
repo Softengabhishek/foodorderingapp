@@ -1,3 +1,5 @@
+
+
 :root{
   --blue : #0E2368;
   --red : #E23744;
@@ -9,6 +11,12 @@
 *{
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  font-family: "source-sans-pro", sans-serif;
+  font-style: normal;
+}
+body{
+  overflow-x: hidden;
 }
 .button{
   color: var(--white);
@@ -16,6 +24,7 @@
   border-radius: 34px;
   display: inline-block;
   font-size: 15px;
+  font-weight: bold;
   padding: 14px 34px;
   margin-top: 40px;
 }
@@ -35,6 +44,7 @@
   font-size: 40px;
   color: var(--blue);
   margin-top: 80px;
+  line-height: 60px;
 }
 .header_title_mid{
   color: var(--red);
@@ -75,9 +85,14 @@
 }
 .cards_row{
   display: flex;
-  flex-direction: row;
   overflow-x: auto;
-  width: 1440px;
+  width: 100%;
+}
+.cards_row:hover{
+  cursor: pointer;
+}
+.cards_row::-webkit-scrollbar{
+  visibility: hidden;
 }
 .cards{
   height: 465px;
@@ -122,14 +137,13 @@ footer{
 @media (max-width : 375px){
 .header{
   display: flex;
-  width: 378.21px;
-  height: auto;
   flex-direction: column-reverse;
+  width: 100vw;
 }
 .logo{
   display: none;
 }
-.right_header{
+/* .right_header{
   width: 380px;
   height: 426px;
   background-size: cover;
@@ -137,15 +151,16 @@ footer{
 .right_header img {
   width: 380px;
   height: 446px;
-}
-.left_header{
+} */
+/* .left_header{
   width: 300px;
   height: 426px;
   padding: 0;
-}
+} */
 footer{
   width: 380px;
   flex-direction: column;
   margin-top: 100px;
+
 }
 }
